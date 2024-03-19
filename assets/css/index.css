@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&family=Rubik&display=swap');
+
+
+
+/*
+  GENERAL
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Nunito;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/*
+  HEADER
+*/
+
+nav {
+    display: flex;
+    justify-content:  space-around;
+}
+
+nav img {
+    width: 70px;
+    height: 70px;
+    margin-right: 150px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 50px;
+}
+
+nav ul li a {
+    font-style: normal;
+    font-weight: 700;
+    font-family: Nunito;
+    text-decoration: none;
+    color: black;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.hover-underline-animation-logout {
+  display: inline-block;
+  position: relative;
+  color: #ff0000;
+}
+
+.hover-underline-animation-logout::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff0000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-logout:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*
+  FOOTER
+*/
+
+footer {
+    display: flex;
+    justify-content:  space-around;
+    background-color: #000000;
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 50px;
+}
+
+footer ul li a {
+    font-style: normal;
+    font-weight: 700;
+    font-family: Nunito;
+    text-decoration: none;
+    color: black;
+}
+
+  .hover-underline-animation-footer {
+    display: inline-block;
+    position: relative;
+    color: #f0f0f0;
+  }
+  
+  .hover-underline-animation-footer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation-footer:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /*
+  HERO-SECTION
+  */
+
+  .hero {
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero p {
+    font-size: 25px;
+  }
+
+  /*
+  QSN-SECTION
+  */
+
+  .qsn {
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+    height: 95vh;
+    max-height: 95vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .qsn h1 {
+    font-size: 45px;
+  }
+
+  .qsn h3 {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .qsn p {
+    font-size: 25px;
+  }
+
+  .qsn button {
+    background: #000000;
+    padding: 10px;
+    border: none;
+    width: 30%;
+    height: 6%;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    margin: 10px;
+  }
+
+  .qsn button:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+  }
+
+  .qsn button {
+    transition: border-radius 150ms ease-in-out;
+  }
+
+
+
+  /*
+  NEWSLETTER-SECTION
+  */
+
+  .newsletter {
+    width: 100%;
+    min-height: 95vh;
+    height: 95vh;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .newsletter h1 {
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-weight: 700;
+  }
+
+  .newsletter h3 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .newsletter .formEmail {
+    padding: 20px 25px;
+    border-radius: 5px;
+    border: 1px solid #CAD3DB;
+    width: 431px;
+    font-size: 18px;
+    color: #0F121F;
+    margin-top: 50px;
+  }
+
+  .newsletter .formEmail:focus{
+    outline: 1px solid #000000;
+    border-radius: 15px;
+  }
+
+  .newsletter .formEmail {
+    transition: border-radius 150ms ease-in-out;
+  }
+
+  .newsletter button {
+    background: #000000;
+    padding: 10px;
+    border: none;
+    width: 244px;
+    height: 65px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+
+  }
+
+  .newsletter button:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+  }
+
+  .newsletter button {
+    transition: border-radius 150ms ease-in-out;
+  }
+
+  .newsletter .box {
+    padding: 90px;
+    background-color: whitesmoke;
+    border-radius: 70px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.7);
+  }
+
+
+    /*
+      SIGN-UP SECTION
+    */
+
+.signup-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-section input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.signup-section button {
+  margin-top: 30px;
+  background: #000000;
+  border: none;
+  width: 100%;
+  padding: 17px 20px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+
+}
+
+.signup-section button:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+.signup-section button {
+  transition: border-radius 150ms ease-in-out;
+}
+
+.signup-section input {
+  border-radius: 5px;
+  border: 1px solid #CAD3DB;
+  font-size: 18px;
+  color: #0F121F;
+}
+
+.signup-section input:focus{
+  outline: 1px solid #000000;
+  border-radius: 15px;
+}
+
+.signup-section input {
+  transition: border-radius 150ms ease-in-out;
+}
+
+    /*
+      SIGN-IN SECTION
+    */
+
+    .signin-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .signin-section input {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    
+    .signin-section button {
+      margin-top: 30px;
+      background: #000000;
+      border: none;
+      width: 100%;
+      padding: 17px 20px;
+      margin: 15px 0;
+      box-sizing: border-box;
+      border-radius: 5px;
+      font-size: 18px;
+      color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    
+    }
+    
+    .signin-section button:hover {
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+    }
+    
+    .signin-section button {
+      transition: border-radius 150ms ease-in-out;
+    }
+    
+    .signin-section input {
+      border-radius: 5px;
+      border: 1px solid #CAD3DB;
+      font-size: 18px;
+      color: #0F121F;
+    }
+    
+    .signin-section input:focus{
+      outline: 1px solid #000000;
+      border-radius: 15px;
+    }
+    
+    .signin-section input {
+      transition: border-radius 150ms ease-in-out;
+    }
+
+
+    /*
+      SIGN-UP SUCESS SECTION
+    */
+
+    .signup-success h1 {
+      margin-top: 0;
+      font-size: 50px;
+    }
+
+    .signup-success p {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .signup-success p a {
+      text-decoration: none;
+      color: grey;
+    }
+
+    .signup-success p a:hover {
+      color: black;
+    }
+
+    .signup-success p a {
+      transition: color 150ms ease-in-out;
+    }
+
+
+      /*
+        INSCRIPTION EVENEMENT-SECTION
+      */
+
+
+      .inscription-evenement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .inscription-evenement input {
+        width: 100%;
+        padding: 10px 25px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+
+      .inscription-evenement select {
+        width: 100%;
+        padding: 10px 25px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      
+      .inscription-evenement button {
+        margin-top: 30px;
+        background: #000000;
+        border: none;
+        width: 100%;
+        padding: 17px 20px;
+        margin: 15px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        font-size: 18px;
+        color: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      }
+      
+      .inscription-evenement button:hover {
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+      }
+      
+      .inscription-evenement button {
+        transition: border-radius 150ms ease-in-out;
+      }
+      
+      .inscription-evenement input {
+        border-radius: 5px;
+        border: 1px solid #CAD3DB;
+        font-size: 18px;
+        color: #0F121F;
+      }
+      
+      .inscription-evenement input:focus{
+        outline: 1px solid #000000;
+        border-radius: 15px;
+      }
+
+      .inscription-evenement input[type="radio"]:focus {
+        outline: none;
+      }
+      
+      .inscription-evenement input {
+        transition: border-radius 150ms ease-in-out;
+      }
+
+      .inscription-evenement select {
+        border-radius: 5px;
+        border: 1px solid #CAD3DB;
+        font-size: 18px;
+        color: #0F121F;
+      }
+      
+      .inscription-evenement select:focus{
+        outline: 1px solid #000000;
+        border-radius: 15px;
+      }
+      
+      .inscription-evenement select {
+        transition: border-radius 150ms ease-in-out;
+      }
+
+      .inscription-evenement .radio {
+        display: block;
+      }
+
+  /*
+    RECAP-SECTION
+  */
+
+  .recap-div {
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .recap-div h1 {
+    font-size: 35px;
+  }
+
+  .recap-div p {
+    font-size: 25px;
+  }
